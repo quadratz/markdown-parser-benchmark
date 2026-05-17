@@ -26,7 +26,7 @@ and run `deno task bench`.
 ## Benchmark Result
 
 This benchmark was generated on
-[Sunday, 17 May 2026](https://github.com/quadratz/markdown-benchmark/tree/bench-2026.05.17-1).
+[Sunday, 17 May 2026](https://github.com/quadratz/markdown-parser-benchmark/tree/bench-2026.05.17-1).
 
 ```
 | benchmark       | time/iter (avg) |        iter/s |      (min … max)      |      p75 |      p99 |     p995 |
