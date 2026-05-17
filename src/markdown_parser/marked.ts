@@ -6,6 +6,7 @@ import { markedSmartypants } from "marked-smartypants";
 import { gfmHeadingId } from "marked-gfm-heading-id";
 
 const processorWithoutPlugin = new Marked({ gfm: false });
+
 const processorWithPlugin = new Marked({ gfm: true })
   .use(markedEmoji({ emojis: nameToEmoji, renderer: ({ emoji }) => emoji }))
   .use(markedSmartypants())

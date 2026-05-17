@@ -5,6 +5,7 @@ import { slug as slugify } from "github-slugger";
 import { full as emojiPlugin } from "markdown-it-emoji";
 
 const processorWithoutPlugin = new MarkdownIt("commonmark");
+
 const processorWithPlugin = new MarkdownIt({ typographer: true, linkify: true, html: true })
   .use(footnotePlugin)
   .use(emojiPlugin)
