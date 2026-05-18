@@ -3,11 +3,11 @@
   "specifiers": {
     "jsr:@std/assert@1.0.19": "1.0.19",
     "jsr:@std/internal@^1.0.12": "1.0.13",
-    "npm:@comark/html@~0.3.1": "0.3.1",
+    "npm:@comark/html@0.3.1": "0.3.1",
     "npm:@types/markdown-it-emoji@3.0.1": "3.0.1",
     "npm:@types/markdown-it-footnote@3.0.4": "3.0.4",
     "npm:@types/markdown-it@14.1.2": "14.1.2",
-    "npm:comark@~0.3.2": "0.3.2",
+    "npm:comark@0.3.2": "0.3.2",
     "npm:gemoji@8.1.0": "8.1.0",
     "npm:github-slugger@2.0.0": "2.0.0",
     "npm:markdown-exit@1.0.0-beta.9": "1.0.0-beta.9",
@@ -944,11 +944,11 @@
   "workspace": {
     "dependencies": [
       "jsr:@std/assert@1.0.19",
-      "npm:@comark/html@~0.3.1",
+      "npm:@comark/html@0.3.1",
       "npm:@types/markdown-it-emoji@3.0.1",
       "npm:@types/markdown-it-footnote@3.0.4",
       "npm:@types/markdown-it@14.1.2",
-      "npm:comark@~0.3.2",
+      "npm:comark@0.3.2",
       "npm:gemoji@8.1.0",
       "npm:github-slugger@2.0.0",
       "npm:markdown-exit@1.0.0-beta.9",

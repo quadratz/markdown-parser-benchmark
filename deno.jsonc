@@ -5,12 +5,12 @@
     "test": "deno test -P"
   },
   "imports": {
-    "@comark/html": "npm:@comark/html@^0.3.1",
+    "@comark/html": "npm:@comark/html@0.3.1",
     "@std/assert": "jsr:@std/assert@1.0.19",
     "@types/markdown-it": "npm:@types/markdown-it@14.1.2",
     "@types/markdown-it-emoji": "npm:@types/markdown-it-emoji@3.0.1",
     "@types/markdown-it-footnote": "npm:@types/markdown-it-footnote@3.0.4",
-    "comark": "npm:comark@^0.3.2",
+    "comark": "npm:comark@0.3.2",
     "gemoji": "npm:gemoji@8.1.0",
     "github-slugger": "npm:github-slugger@2.0.0",
     "markdown-exit": "npm:markdown-exit@1.0.0-beta.9",
