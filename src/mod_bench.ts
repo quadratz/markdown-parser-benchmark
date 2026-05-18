@@ -7,18 +7,18 @@ import { remarkRehype } from "./markdown_parser/remark_rehype.ts";
 
 const benchList = [
   // Without plugin
-  ["remark-rehype", () => remarkRehype(mdContent, { withPlugin: false })],
   ["markdown-it", () => markdownIt(mdContent, { withPlugin: false })],
   ["markdown-exit", () => markdownExit(mdContent, { withPlugin: false })],
-  ["marked", () => marked(mdContent, { withPlugin: false })],
   ["comark", () => comark(mdContent, { withPlugin: false })],
+  ["marked", () => marked(mdContent, { withPlugin: false })],
+  ["remark-rehype", () => remarkRehype(mdContent, { withPlugin: false })],
 
   // With plugin
-  ["remark-rehype", () => remarkRehype(mdContent, { withPlugin: true })],
   ["markdown-it", () => markdownIt(mdContent, { withPlugin: true })],
   ["markdown-exit", () => markdownExit(mdContent, { withPlugin: true })],
-  ["marked", () => marked(mdContent, { withPlugin: true })],
   ["comark", () => comark(mdContent, { withPlugin: true })],
+  ["marked", () => marked(mdContent, { withPlugin: true })],
+  ["remark-rehype", () => remarkRehype(mdContent, { withPlugin: true })],
 ] as const;
 
 const total = benchList.length;
