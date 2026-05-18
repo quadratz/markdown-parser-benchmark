@@ -1,7 +1,7 @@
 # Markdown Parser Benchmark
 
-This is a personal benchmark to evaluate the performance of various Markdown parsers as of the
-current date, as I felt that existing benchmarks were quite outdated.
+This is a personal benchmark to evaluate the performance of various JavaScript Markdown parsers as
+of the current date, as I felt that existing benchmarks were quite outdated.
 
 This benchmark may not be perfectly accurate. Therefore, any suggestions to improve it are highly
 welcome.
@@ -26,35 +26,44 @@ and run `deno task bench`.
 ## Benchmark Result
 
 This benchmark was generated on
-[Sunday, 17 May 2026](https://github.com/quadratz/markdown-parser-benchmark/tree/bench-2026.05.17-1).
+[Tuesday, 19 May 2026](https://github.com/quadratz/markdown-parser-benchmark/actions/runs/26067082958/job/76640184769).
 
 ```
+    CPU | Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz
+Runtime | Deno 2.7.14 (x86_64-unknown-linux-gnu)
+
+file:///home/runner/work/markdown-parser-benchmark/markdown-parser-benchmark/src/mod_bench.ts
+
 | benchmark       | time/iter (avg) |        iter/s |      (min … max)      |      p75 |      p99 |     p995 |
 | --------------- | --------------- | ------------- | --------------------- | -------- | -------- | -------- |
 
 group Without Plugin
-| remark-rehype   |         15.5 ms |          64.3 | (  8.8 ms …  30.2 ms) |  18.3 ms |  30.2 ms |  30.2 ms |
-| markdown-it     |        926.9 µs |         1,079 | (583.4 µs …   7.8 ms) | 926.5 µs |   3.6 ms |   5.1 ms |
-| markdown-exit   |        819.1 µs |         1,221 | (537.0 µs …   4.4 ms) | 841.4 µs |   3.1 ms |   3.4 ms |
-| marked          |          1.1 ms |         890.5 | (873.6 µs …   3.5 ms) |   1.1 ms |   2.5 ms |   2.9 ms |
+| markdown-it     |        313.4 µs |         3,191 | (239.7 µs …   2.6 ms) | 290.4 µs | 890.8 µs |   1.2 ms |
+| markdown-exit   |        402.9 µs |         2,482 | (290.7 µs …   7.2 ms) | 373.6 µs |   1.1 ms |   1.4 ms |
+| comark          |          1.2 ms |         858.6 | (930.5 µs …   4.1 ms) |   1.2 ms |   2.3 ms |   3.0 ms |
+| marked          |        422.2 µs |         2,369 | (373.5 µs …   1.3 ms) | 412.2 µs | 869.5 µs | 908.7 µs |
+| remark-rehype   |          5.5 ms |         181.8 | (  3.8 ms …  11.7 ms) |   6.3 ms |  10.5 ms |  11.7 ms |
 
 summary
-  markdown-exit
-     1.13x faster than markdown-it
-     1.37x faster than marked
-    18.98x faster than remark-rehype
+  markdown-it
+     1.29x faster than markdown-exit
+     1.35x faster than marked
+     3.72x faster than comark
+    17.55x faster than remark-rehype
 
 group With Plugin
-| remark-rehype   |         37.6 ms |          26.6 | ( 27.1 ms …  54.4 ms) |  41.3 ms |  54.4 ms |  54.4 ms |
-| markdown-it     |          1.4 ms |         692.6 | (970.9 µs …  11.7 ms) |   1.5 ms |   4.2 ms |   5.1 ms |
-| markdown-exit   |          1.3 ms |         788.1 | (895.2 µs …   8.0 ms) |   1.4 ms |   3.6 ms |   4.0 ms |
-| marked          |          5.6 ms |         180.0 | (  4.1 ms …  11.9 ms) |   5.9 ms |  11.1 ms |  11.9 ms |
+| markdown-it     |        553.8 µs |         1,806 | (453.7 µs …   3.0 ms) | 529.9 µs |   1.1 ms |   1.3 ms |
+| markdown-exit   |        632.3 µs |         1,582 | (545.2 µs …   1.7 ms) | 613.5 µs |   1.1 ms |   1.2 ms |
+| comark          |          1.3 ms |         777.6 | (  1.1 ms …   2.7 ms) |   1.2 ms |   2.2 ms |   2.3 ms |
+| marked          |          2.4 ms |         425.2 | (  2.1 ms …   5.0 ms) |   2.3 ms |   4.5 ms |   4.8 ms |
+| remark-rehype   |         15.8 ms |          63.3 | ( 12.1 ms …  26.1 ms) |  17.1 ms |  26.1 ms |  26.1 ms |
 
 summary
-  markdown-exit
-     1.14x faster than markdown-it
-     4.38x faster than marked
-    29.61x faster than remark-rehype
+  markdown-it
+     1.14x faster than markdown-exit
+     2.32x faster than comark
+     4.25x faster than marked
+    28.52x faster than remark-rehype
 ```
 
 [deno]: https://docs.deno.com/runtime/getting_started/installation/
