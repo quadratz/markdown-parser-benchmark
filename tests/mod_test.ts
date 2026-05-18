@@ -9,18 +9,18 @@ import mdContent from "../src/fixture.md" with { type: "text" };
 const snapshotDir = join(Deno.cwd(), "tests", "snapshots");
 
 Deno.test("Should output the correct HTML", async ({ step }) => {
-  await step("markdown-exit with plugin", () => {
+  await step("markdown-exit with plugin", async () => {
     const snapshotFile = join(snapshotDir, "markdown_exit_with_plugin.snapshot.html");
     const snapshotContent = Deno.readTextFileSync(snapshotFile);
-    const html = markdownExit(mdContent, { withPlugin: true });
+    const html = await markdownExit(mdContent, { withPlugin: true });
 
     assertEquals(html, snapshotContent);
   });
 
-  await step("markdown-exit without plugin", () => {
+  await step("markdown-exit without plugin", async () => {
     const snapshotFile = join(snapshotDir, "markdown_exit_without_plugin.snapshot.html");
     const snapshotContent = Deno.readTextFileSync(snapshotFile);
-    const html = markdownExit(mdContent, { withPlugin: false });
+    const html = await markdownExit(mdContent, { withPlugin: false });
 
     assertEquals(html, snapshotContent);
   });

@@ -15,12 +15,12 @@ interface Options {
   withPlugin: boolean;
 }
 
-export function markdownExit(content: string, opt: Options): string {
+export async function markdownExit(content: string, opt: Options): Promise<string> {
   const { withPlugin } = opt;
 
   const html = withPlugin
-    ? processorWithPlugin.render(content)
-    : processorWithoutPlugin.render(content);
+    ? await processorWithPlugin.renderAsync(content)
+    : await processorWithoutPlugin.renderAsync(content);
 
   return html;
 }
