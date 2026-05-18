@@ -1,5 +1,6 @@
 import { join } from "node:path";
 import { assertEquals } from "@std/assert";
+import { comark } from "../src/markdown_parser/comark.ts";
 import { marked } from "../src/markdown_parser/marked.ts";
 import { markdownIt } from "../src/markdown_parser/markdown_it.ts";
 import { markdownExit } from "../src/markdown_parser/markdown_exit.ts";
@@ -9,6 +10,22 @@ import mdContent from "../src/fixture.md" with { type: "text" };
 const snapshotDir = join(Deno.cwd(), "tests", "snapshots");
 
 Deno.test("Should output the correct HTML", async ({ step }) => {
+  await step("comark with plugin", async () => {
+    const snapshotFile = join(snapshotDir, "comark_with_plugin.snapshot.html");
+    const snapshotContent = Deno.readTextFileSync(snapshotFile);
+    const html = await comark(mdContent, { withPlugin: true });
+
+    assertEquals(html, snapshotContent);
+  });
+
+  await step("comark without plugin", async () => {
+    const snapshotFile = join(snapshotDir, "comark_without_plugin.snapshot.html");
+    const snapshotContent = Deno.readTextFileSync(snapshotFile);
+    const html = await comark(mdContent, { withPlugin: false });
+
+    assertEquals(html, snapshotContent);
+  });
+
   await step("markdown-exit with plugin", async () => {
     const snapshotFile = join(snapshotDir, "markdown_exit_with_plugin.snapshot.html");
     const snapshotContent = Deno.readTextFileSync(snapshotFile);

@@ -1,4 +1,5 @@
 import mdContent from "./fixture.md" with { type: "text" };
+import { comark } from "./markdown_parser/comark.ts";
 import { marked } from "./markdown_parser/marked.ts";
 import { markdownIt } from "./markdown_parser/markdown_it.ts";
 import { markdownExit } from "./markdown_parser/markdown_exit.ts";
@@ -10,12 +11,14 @@ const benchList = [
   ["markdown-it", () => markdownIt(mdContent, { withPlugin: false })],
   ["markdown-exit", () => markdownExit(mdContent, { withPlugin: false })],
   ["marked", () => marked(mdContent, { withPlugin: false })],
+  ["comark", () => comark(mdContent, { withPlugin: false })],
 
   // With plugin
   ["remark-rehype", () => remarkRehype(mdContent, { withPlugin: true })],
   ["markdown-it", () => markdownIt(mdContent, { withPlugin: true })],
   ["markdown-exit", () => markdownExit(mdContent, { withPlugin: true })],
   ["marked", () => marked(mdContent, { withPlugin: true })],
+  ["comark", () => comark(mdContent, { withPlugin: true })],
 ] as const;
 
 const total = benchList.length;
