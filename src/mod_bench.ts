@@ -28,7 +28,7 @@ for (let i = 0; i < total; i++) {
   const [name, callback] = benchList[i];
   const group = i < half ? "Without Plugin" : "With Plugin";
 
-  Deno.bench(name, { group, n: 2000 }, async () => {
+  Deno.bench(name, { group }, async () => {
     await callback();
   });
 }
