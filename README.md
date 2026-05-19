@@ -23,6 +23,14 @@ For the tests with plugins, we added the following extensions to all parsers:
 To run the benchmark yourself, you must have [Deno][Deno] installed. Simply clone this repository
 and run `deno task bench`.
 
+## Installation
+
+1. Ensure you have [Deno installed](https://docs.deno.com/runtime/getting_started/installation/).
+2. Clone this repository: `git clone https://github.com/quadratz/markdown-parser-benchmark.git`.
+3. Navigate to the project directory: `cd markdown-parser-benchmark`.
+4. Run the benchmark: `deno task bench`.
+5. The benchmark results will be displayed in the terminal.
+
 ## Benchmark Result
 
 This benchmark was generated on
