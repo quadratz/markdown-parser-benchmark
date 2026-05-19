@@ -20,12 +20,12 @@ For the tests with plugins, we added the following extensions to all parsers:
 - A plugin for Smartypants.
 - A plugin for adding IDs to headings.
 
-To run the benchmark yourself, you must have [Deno][Deno] installed. Simply clone this repository
+To run the benchmark yourself, you must have [Deno installed][Deno]. Simply clone this repository
 and run `deno task bench`.
 
 ## Installation
 
-1. Ensure you have [Deno installed](https://docs.deno.com/runtime/getting_started/installation/).
+1. Ensure you have [Deno installed][deno].
 2. Clone this repository: `git clone https://github.com/quadratz/markdown-parser-benchmark.git`.
 3. Navigate to the project directory: `cd markdown-parser-benchmark`.
 4. Run the benchmark: `deno task bench`.
@@ -73,5 +73,13 @@ summary
      4.25x faster than marked
     28.52x faster than remark-rehype
 ```
+
+## Benchmark History
+
+The full benchmark history is documented in the
+[Releases Section](https://github.com/quadratz/markdown-parser-benchmark/releases).
+
+- **2026.05.19** ---
+  [bench-2026.05.19-1](https://github.com/quadratz/markdown-parser-benchmark/releases/tag/bench-2026.05.19-1)
 
 [deno]: https://docs.deno.com/runtime/getting_started/installation/
