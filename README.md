@@ -79,7 +79,7 @@ summary
 The full benchmark history is documented in the
 [Releases Section](https://github.com/quadratz/markdown-parser-benchmark/releases).
 
-- **2026.05.19** ---
+- **2026.05.19** —
   [bench-2026.05.19-1](https://github.com/quadratz/markdown-parser-benchmark/releases/tag/bench-2026.05.19-1)
 
 [deno]: https://docs.deno.com/runtime/getting_started/installation/
