@@ -3,23 +3,23 @@
   "specifiers": {
     "jsr:@std/assert@1.0.19": "1.0.19",
     "jsr:@std/internal@^1.0.12": "1.0.14",
-    "npm:@comark/html@0.3.1": "0.3.1",
+    "npm:@comark/html@0.4.0": "0.4.0",
     "npm:@types/markdown-it-emoji@3.0.1": "3.0.1",
     "npm:@types/markdown-it-footnote@3.0.4": "3.0.4",
     "npm:@types/markdown-it@14.1.2": "14.1.2",
-    "npm:comark@0.3.2": "0.3.2",
+    "npm:comark@0.4.0": "0.4.0",
     "npm:gemoji@8.1.0": "8.1.0",
     "npm:github-slugger@2.0.0": "2.0.0",
-    "npm:markdown-exit@1.0.0-beta.9": "1.0.0-beta.9",
-    "npm:markdown-it-anchor@9.2.0": "9.2.0_@types+markdown-it@14.1.2_markdown-it@14.1.1",
+    "npm:markdown-exit@1.1.0-beta.2": "1.1.0-beta.2",
+    "npm:markdown-it-anchor@9.2.0": "9.2.0_@types+markdown-it@14.1.2_markdown-it@14.2.0",
     "npm:markdown-it-emoji@3.0.0": "3.0.0",
     "npm:markdown-it-footnote@4.0.0": "4.0.0",
-    "npm:markdown-it@14.1.1": "14.1.1",
-    "npm:marked-emoji@2.0.3": "2.0.3_marked@18.0.3",
-    "npm:marked-footnote@1.4.0": "1.4.0_marked@18.0.3",
-    "npm:marked-gfm-heading-id@4.1.4": "4.1.4_marked@18.0.3",
-    "npm:marked-smartypants@1.1.12": "1.1.12_marked@18.0.3",
-    "npm:marked@18.0.3": "18.0.3",
+    "npm:markdown-it@14.2.0": "14.2.0",
+    "npm:marked-emoji@2.0.3": "2.0.3_marked@18.0.5",
+    "npm:marked-footnote@1.4.0": "1.4.0_marked@18.0.5",
+    "npm:marked-gfm-heading-id@4.1.4": "4.1.4_marked@18.0.5",
+    "npm:marked-smartypants@1.1.12": "1.1.12_marked@18.0.5",
+    "npm:marked@18.0.5": "18.0.5",
     "npm:rehype-slug@6.0.0": "6.0.0",
     "npm:rehype-stringify@10.0.1": "10.0.1",
     "npm:remark-gemoji@8.0.0": "8.0.0",
@@ -71,8 +71,8 @@
       "os": ["win32"],
       "cpu": ["x64"]
     },
-    "@comark/html@0.3.1": {
-      "integrity": "sha512-vlFWZ8TMSaQ/WXwzktnZyPsm8XuE7GWEZ7ag2jXFL88Wf2ibSHvFgsoiDr9gDX9752haT4CU0Biph+5xXJ30Vg==",
+    "@comark/html@0.4.0": {
+      "integrity": "sha512-7/nc9y6AuECAeh3WwtvnsuTHaLaXy1FxMnI2BrD7ZCvZdQ+fTcP+WLL6Zlau79HxPrATkurp/uv3q9rJApkDbA==",
       "dependencies": [
         "comark"
       ]
@@ -198,13 +198,13 @@
     "character-entities@2.0.2": {
       "integrity": "sha512-shx7oQ0Awen/BRIdkjkvz54PnEEI/EjwXDSIZp86/KKdbafHh1Df/RYGBhn4hbe2+uKC9FnT5UCEdyPz3ai9hQ=="
     },
-    "comark@0.3.2": {
-      "integrity": "sha512-wZ16V3PPItX49EScg6yDswqQ24bsMAhujZUGIf1dBKMmZjqGBa4HmXDe+WZNeqNQSOd8v4AJJT1NKyrvgdf3dA==",
+    "comark@0.4.0": {
+      "integrity": "sha512-s+wZc9FDgxJDxS3oLhDhthuc8EFggd7oEQaGKEFSw/UbECEwM3qMgW/T3dk6eoNTuy+PNSAyPQtjyKZJfudlbA==",
       "dependencies": [
         "entities@8.0.0",
         "htmlparser2",
         "js-yaml",
-        "markdown-exit"
+        "markdown-exit@1.0.0-beta.9"
       ]
     },
     "comma-separated-tokens@2.0.3": {
@@ -354,7 +354,19 @@
         "uc.micro"
       ]
     },
-    "markdown-it-anchor@9.2.0_@types+markdown-it@14.1.2_markdown-it@14.1.1": {
+    "markdown-exit@1.1.0-beta.2": {
+      "integrity": "sha512-8CzMGVlFZ4DEfnc8KU+4ycUW2SIOuiXqCHD7z51ecVEi/weyc0f2ylQbCm4KoKuVlTZSuMUMnWT0hTyquZ7anQ==",
+      "dependencies": [
+        "@types/linkify-it",
+        "@types/mdurl",
+        "entities@7.0.1",
+        "linkify-it",
+        "mdurl",
+        "punycode.js",
+        "uc.micro"
+      ]
+    },
+    "markdown-it-anchor@9.2.0_@types+markdown-it@14.1.2_markdown-it@14.2.0": {
       "integrity": "sha512-sa2ErMQ6kKOA4l31gLGYliFQrMKkqSO0ZJgGhDHKijPf0pNFM9vghjAh3gn26pS4JDRs7Iwa9S36gxm3vgZTzg==",
       "dependencies": [
         "@types/markdown-it",
@@ -367,8 +379,8 @@
     "markdown-it-footnote@4.0.0": {
       "integrity": "sha512-WYJ7urf+khJYl3DqofQpYfEYkZKbmXmwxQV8c8mO/hGIhgZ1wOe7R4HLFNwqx7TjILbnC98fuyeSsin19JdFcQ=="
     },
-    "markdown-it@14.1.1": {
-      "integrity": "sha512-BuU2qnTti9YKgK5N+IeMubp14ZUKUUw7yeJbkjtosvHiP0AZ5c8IAgEMk79D0eC8F23r4Ac/q8cAIFdm2FtyoA==",
+    "markdown-it@14.2.0": {
+      "integrity": "sha512-1TGiQiJVRQ3NPmZH6sx5Cfnmg6GQm9jvC1ch4TK511NjSJvjzKLzn5pPfZRNZkRPZP0HqCioSndqH8v2nRaWVQ==",
       "dependencies": [
         "argparse",
         "entities@4.5.0",
@@ -382,34 +394,34 @@
     "markdown-table@3.0.4": {
       "integrity": "sha512-wiYz4+JrLyb/DqW2hkFJxP7Vd7JuTDm77fvbM8VfEQdmSMqcImWeeRbHwZjBjIFki/VaMK2BhFi7oUUZeM5bqw=="
     },
-    "marked-emoji@2.0.3_marked@18.0.3": {
+    "marked-emoji@2.0.3_marked@18.0.5": {
       "integrity": "sha512-fChW/AfUqCHgoEC1nFDgiw3OR/qsi71/QXH/HTo05yd6B5+T+VHh1SqCpn/HpeGLDxkA+MK4+hr4eULB2/A8Jw==",
       "dependencies": [
         "marked"
       ]
     },
-    "marked-footnote@1.4.0_marked@18.0.3": {
+    "marked-footnote@1.4.0_marked@18.0.5": {
       "integrity": "sha512-fZTxAhI1TcLEs5UOjCfYfTHpyKGaWQevbxaGTEA68B51l7i87SctPFtHETYqPkEN0ka5opvy4Dy1l/yXVC+hmg==",
       "dependencies": [
         "marked"
       ]
     },
-    "marked-gfm-heading-id@4.1.4_marked@18.0.3": {
+    "marked-gfm-heading-id@4.1.4_marked@18.0.5": {
       "integrity": "sha512-CspnvVfHSkb/znqdPS4jUR8HtCjq3M/DnrsJCrfLBLvdrgbemmoINKpeWKQYkBiXAoBGejw0cV7xzqrPdup3WA==",
       "dependencies": [
         "github-slugger",
         "marked"
       ]
     },
-    "marked-smartypants@1.1.12_marked@18.0.3": {
+    "marked-smartypants@1.1.12_marked@18.0.5": {
       "integrity": "sha512-Z0QL2GpihbSeG5aaCrQxMEoqvngMftF/gq1SrdlCnbecUSrX3HYgPtCZzCW+OyNe2ideQqaFdxfGryqQX1MBDA==",
       "dependencies": [
         "marked",
         "smartypants"
       ]
     },
-    "marked@18.0.3": {
-      "integrity": "sha512-7VT90JOkDeaRWpfjOReRGPEKn0ecdARBkDGL+tT1wZY0efPPqkUxLUSmzy/C7TIylQYJC9STISEsCHrqb/7VIA==",
+    "marked@18.0.5": {
+      "integrity": "sha512-S6GcvALHg6K4ohtu4E7x0a1AqhAjp6cV8KhLSyN9qVapnzJkusVBxZRcIU9AeYsbe6P1hKDusSbEOzGyyuce6w==",
       "bin": true
     },
     "mdast-util-find-and-replace@3.0.2": {
@@ -1035,23 +1047,23 @@
   "workspace": {
     "dependencies": [
       "jsr:@std/assert@1.0.19",
-      "npm:@comark/html@0.3.1",
+      "npm:@comark/html@0.4.0",
       "npm:@types/markdown-it-emoji@3.0.1",
       "npm:@types/markdown-it-footnote@3.0.4",
       "npm:@types/markdown-it@14.1.2",
-      "npm:comark@0.3.2",
+      "npm:comark@0.4.0",
       "npm:gemoji@8.1.0",
       "npm:github-slugger@2.0.0",
-      "npm:markdown-exit@1.0.0-beta.9",
+      "npm:markdown-exit@1.1.0-beta.2",
       "npm:markdown-it-anchor@9.2.0",
       "npm:markdown-it-emoji@3.0.0",
       "npm:markdown-it-footnote@4.0.0",
-      "npm:markdown-it@14.1.1",
+      "npm:markdown-it@14.2.0",
       "npm:marked-emoji@2.0.3",
       "npm:marked-footnote@1.4.0",
       "npm:marked-gfm-heading-id@4.1.4",
       "npm:marked-smartypants@1.1.12",
-      "npm:marked@18.0.3",
+      "npm:marked@18.0.5",
       "npm:rehype-slug@6.0.0",
       "npm:rehype-stringify@10.0.1",
       "npm:remark-gemoji@8.0.0",
