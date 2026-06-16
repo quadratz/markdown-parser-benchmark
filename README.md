@@ -34,50 +34,51 @@ and run `deno task bench`.
 ## Benchmark Result
 
 This benchmark was generated on
-[Tuesday, 19 May 2026](https://github.com/quadratz/markdown-parser-benchmark/actions/runs/26067082958/job/76640184769).
+[Tuesday, 16 June 2026](https://github.com/quadratz/markdown-parser-benchmark/actions/runs/27591188025/job/81572044040).
 
 ```
-    CPU | Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz
-Runtime | Deno 2.7.14 (x86_64-unknown-linux-gnu)
-
+    CPU | AMD EPYC 9V74 80-Core Processor
+Runtime | Deno 2.8.3 (x86_64-unknown-linux-gnu)
 file:///home/runner/work/markdown-parser-benchmark/markdown-parser-benchmark/src/mod_bench.ts
-
 | benchmark       | time/iter (avg) |        iter/s |      (min … max)      |      p75 |      p99 |     p995 |
 | --------------- | --------------- | ------------- | --------------------- | -------- | -------- | -------- |
-
 group Without Plugin
-| markdown-it     |        313.4 µs |         3,191 | (239.7 µs …   2.6 ms) | 290.4 µs | 890.8 µs |   1.2 ms |
-| markdown-exit   |        402.9 µs |         2,482 | (290.7 µs …   7.2 ms) | 373.6 µs |   1.1 ms |   1.4 ms |
-| comark          |          1.2 ms |         858.6 | (930.5 µs …   4.1 ms) |   1.2 ms |   2.3 ms |   3.0 ms |
-| marked          |        422.2 µs |         2,369 | (373.5 µs …   1.3 ms) | 412.2 µs | 869.5 µs | 908.7 µs |
-| remark-rehype   |          5.5 ms |         181.8 | (  3.8 ms …  11.7 ms) |   6.3 ms |  10.5 ms |  11.7 ms |
-
+| markdown-it     |        307.5 µs |         3,252 | (235.0 µs …   2.0 ms) | 284.1 µs | 852.2 µs |   1.3 ms |
+| markdown-exit   |        371.3 µs |         2,693 | (278.7 µs …   5.8 ms) | 353.8 µs | 901.8 µs |   1.0 ms |
+| comark          |          1.2 ms |         865.2 | (877.2 µs …   4.9 ms) |   1.2 ms |   2.3 ms |   2.3 ms |
+| marked          |        392.4 µs |         2,548 | (336.3 µs …   1.1 ms) | 379.7 µs | 810.4 µs | 854.9 µs |
+| satteri         |         75.8 µs |        13,190 | ( 67.7 µs …  22.4 ms) |  71.6 µs |  98.5 µs | 118.2 µs |
+| remark-rehype   |          5.0 ms |         198.6 | (  3.5 ms …  10.7 ms) |   5.8 ms |   8.3 ms |  10.7 ms |
 summary
-  markdown-it
-     1.29x faster than markdown-exit
-     1.35x faster than marked
-     3.72x faster than comark
-    17.55x faster than remark-rehype
-
+  satteri
+     4.06x faster than markdown-it
+     4.90x faster than markdown-exit
+     5.18x faster than marked
+    15.25x faster than comark
+    66.43x faster than remark-rehype
 group With Plugin
-| markdown-it     |        553.8 µs |         1,806 | (453.7 µs …   3.0 ms) | 529.9 µs |   1.1 ms |   1.3 ms |
-| markdown-exit   |        632.3 µs |         1,582 | (545.2 µs …   1.7 ms) | 613.5 µs |   1.1 ms |   1.2 ms |
-| comark          |          1.3 ms |         777.6 | (  1.1 ms …   2.7 ms) |   1.2 ms |   2.2 ms |   2.3 ms |
-| marked          |          2.4 ms |         425.2 | (  2.1 ms …   5.0 ms) |   2.3 ms |   4.5 ms |   4.8 ms |
-| remark-rehype   |         15.8 ms |          63.3 | ( 12.1 ms …  26.1 ms) |  17.1 ms |  26.1 ms |  26.1 ms |
-
+| markdown-it     |        558.2 µs |         1,792 | (413.7 µs …   1.7 ms) | 560.1 µs |   1.1 ms |   1.4 ms |
+| markdown-exit   |        613.4 µs |         1,630 | (500.3 µs …   1.5 ms) | 587.4 µs |   1.2 ms |   1.3 ms |
+| comark          |          1.3 ms |         779.0 | (  1.0 ms …   2.5 ms) |   1.4 ms |   2.2 ms |   2.2 ms |
+| marked          |          2.3 ms |         436.4 | (  1.9 ms …   4.4 ms) |   2.3 ms |   4.2 ms |   4.3 ms |
+| satteri         |        412.9 µs |         2,422 | (312.0 µs …   4.4 ms) | 402.4 µs |   1.2 ms |   2.3 ms |
+| remark-rehype   |         13.8 ms |          72.5 | ( 11.4 ms …  22.7 ms) |  15.1 ms |  22.7 ms |  22.7 ms |
 summary
-  markdown-it
-     1.14x faster than markdown-exit
-     2.32x faster than comark
-     4.25x faster than marked
-    28.52x faster than remark-rehype
+  satteri
+     1.35x faster than markdown-it
+     1.49x faster than markdown-exit
+     3.11x faster than comark
+     5.55x faster than marked
+    33.41x faster than remark-rehype
 ```
 
 ## Benchmark History
 
 The full benchmark history is documented in the
 [Releases Section](https://github.com/quadratz/markdown-parser-benchmark/releases).
+
+- **16 Jun 2026** —
+  [bench-2026.06.16-1](https://github.com/quadratz/markdown-parser-benchmark/releases/tag/bench-2026.06.16-1)
 
 - **19 May 2026** —
   [bench-2026.05.19-1](https://github.com/quadratz/markdown-parser-benchmark/releases/tag/bench-2026.05.19-1)
