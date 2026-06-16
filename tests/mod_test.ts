@@ -6,6 +6,7 @@ import { markdownIt } from "../src/markdown_parser/markdown_it.ts";
 import { markdownExit } from "../src/markdown_parser/markdown_exit.ts";
 import { remarkRehype } from "../src/markdown_parser/remark_rehype.ts";
 import mdContent from "../src/fixture.md" with { type: "text" };
+import { satteri } from "../src/markdown_parser/satteri.ts";
 
 const snapshotDir = join(Deno.cwd(), "tests", "snapshots");
 
@@ -101,6 +102,28 @@ Deno.test("Should output the correct HTML", async ({ step }) => {
     );
     const snapshotContent = Deno.readTextFileSync(snapshotFile);
     const html = await remarkRehype(mdContent, { withPlugin: false });
+
+    assertEquals(html, snapshotContent);
+  });
+
+  await step("satteri with plugin", async () => {
+    const snapshotFile = join(
+      snapshotDir,
+      "satteri_with_plugin.snapshot.html",
+    );
+    const snapshotContent = Deno.readTextFileSync(snapshotFile);
+    const html = await satteri(mdContent, { withPlugin: true });
+
+    assertEquals(html, snapshotContent);
+  });
+
+  await step("satteri without plugin", async () => {
+    const snapshotFile = join(
+      snapshotDir,
+      "satteri_without_plugin.snapshot.html",
+    );
+    const snapshotContent = Deno.readTextFileSync(snapshotFile);
+    const html = await satteri(mdContent, { withPlugin: false });
 
     assertEquals(html, snapshotContent);
   });

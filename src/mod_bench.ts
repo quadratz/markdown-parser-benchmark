@@ -4,6 +4,7 @@ import { marked } from "./markdown_parser/marked.ts";
 import { markdownIt } from "./markdown_parser/markdown_it.ts";
 import { markdownExit } from "./markdown_parser/markdown_exit.ts";
 import { remarkRehype } from "./markdown_parser/remark_rehype.ts";
+import { satteri } from "./markdown_parser/satteri.ts";
 
 const benchList = [
   // Without plugin
@@ -11,6 +12,7 @@ const benchList = [
   ["markdown-exit", () => markdownExit(mdContent, { withPlugin: false })],
   ["comark", () => comark(mdContent, { withPlugin: false })],
   ["marked", () => marked(mdContent, { withPlugin: false })],
+  ["satteri", () => satteri(mdContent, { withPlugin: false })],
   ["remark-rehype", () => remarkRehype(mdContent, { withPlugin: false })],
 
   // With plugin
@@ -18,6 +20,7 @@ const benchList = [
   ["markdown-exit", () => markdownExit(mdContent, { withPlugin: true })],
   ["comark", () => comark(mdContent, { withPlugin: true })],
   ["marked", () => marked(mdContent, { withPlugin: true })],
+  ["satteri", () => satteri(mdContent, { withPlugin: true })],
   ["remark-rehype", () => remarkRehype(mdContent, { withPlugin: true })],
 ] as const;
 

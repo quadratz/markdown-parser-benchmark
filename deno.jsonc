@@ -30,12 +30,28 @@
     "remark-parse": "npm:remark-parse@11.0.0",
     "remark-rehype": "npm:remark-rehype@11.1.2",
     "remark-smartypants": "npm:remark-smartypants@3.0.2",
+    "satteri": "npm:satteri@0.8.1",
     "unified": "npm:unified@11.0.5"
   },
   "exclude": ["**/snapshots/**/*", "**/__snapshots__/**/*"],
   "permissions": {
     "default": {
-      "read": ["./src/fixture.md", "./tests/snapshots/"]
+      "read": ["./src/fixture.md", "./tests/snapshots/"],
+      "env": {
+        "allow": [
+          "NAPI_RS_NATIVE_LIBRARY_PATH", // For Satteri
+          "NAPI_RS_FORCE_WASI", // For Satteri
+          "NAPI_RS_ENFORCE_VERSION_CHECK" // For Satteri
+        ]
+      },
+      "sys": {
+        "allow": [
+          "cpus", // For Satteri
+          "networkInterfaces", // For Satteri
+          "hostname" // For Satteri
+        ]
+      },
+      "ffi": true // For Satteri
     }
   },
   "fmt": { "lineWidth": 100 },
